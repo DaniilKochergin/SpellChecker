@@ -2,6 +2,7 @@ package Source;
 
 import Mistakes.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -9,6 +10,16 @@ import java.util.List;
 public class WordFounder {
     public WordFounder(Data data) {
         this.data = data;
+        try {
+            data.read();
+        } catch (IOException e){
+            System.out.println(e.getMessage());
+            try {
+                data.close();
+            } catch (IOException e1) {
+                System.out.println(e.getMessage());
+            }
+        }
         defaultMistakes = new ArrayList<>(List.of(
                 new DoubleLetter(data),
                 new Hyphen(data),

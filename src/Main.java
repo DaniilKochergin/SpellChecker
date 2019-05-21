@@ -20,12 +20,6 @@ public class Main {
             System.out.println(e.getMessage());
             data.close();
         }
-        try {
-            data.read();
-        } catch (IOException e){
-            System.out.println(e.getMessage());
-            data.close();
-        }
         WordFounder wordFounder = new WordFounder(data);
         if (wordFounder.exist(word)){
             System.out.println("Word is correct!");
