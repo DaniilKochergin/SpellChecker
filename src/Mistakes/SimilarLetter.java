@@ -14,12 +14,12 @@ public class SimilarLetter extends DefaultMistakes {
 
     private static final HashMap<String, String> similarVowels = new HashMap<>(Map.of(
             "о", "а",
-            "ё", "а",
+            "а", "ё",
             "ю", "у",
             "э", "и",
             "е", "и",
             "ы", "и",
-            "я", "и",
+            "ё", "е",
             "б", "п",
             "з", "с",
             "г", "к"

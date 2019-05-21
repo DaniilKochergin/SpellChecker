@@ -14,7 +14,8 @@ public class WordFounder {
                 new Hyphen(data),
                 new SeqLetters(data),
                 new SimilarLetter(data),
-                new SkipLetter(data)
+                new SkipLetter(data),
+                new AddLetter(data)
         ));
     }
 
